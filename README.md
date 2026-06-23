@@ -1,2 +1,2 @@
 # pbo-km-narkotika-Faiq
-cuma tugas
+jadi gini, yes
