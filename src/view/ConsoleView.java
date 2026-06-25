@@ -75,7 +75,17 @@ public class ConsoleView {
         System.out.println("=============================\n");
     }
 
-    public void tampilkanStatistik(StatistikPutusan stat) {
+        public void tampilkanStatistik(StatistikPutusan stat) {
+        System.out.println("\n======= STATISTIK PUTUSAN =======");
+        System.out.println("Total Putusan          : " + stat.getTotalPutusan());
+        System.out.println("Rata-rata Vonis        : " + String.format("%.2f", stat.getRataRataVonis()) + " bulan");
+        System.out.println("Rata-rata Denda        : Rp " + String.format("%,.2f", stat.getRataRataDenda()));
+        System.out.println("Narkotika Terbanyak    : " + stat.getJenisNarkotikaTerbanyak());
+        System.out.println("Distribusi Peran       : ");
+        for (String peran : stat.getDistribusiPeran()) {
+            System.out.println("   - " + peran);
+        }
+        System.out.println("=================================\n");
     }
 
         public void tampilkanPesan(String pesan) {
