@@ -12,8 +12,23 @@ public class ConsoleView {
         this.scanner = new Scanner(System.in);
     }
 
-    public int tampilkanMenu() {
-        return 0;
+        public int tampilkanMenu() {
+        System.out.println("\n═══════════════════════════════════════");
+        System.out.println("   KMS PUTUSAN PENGADILAN NARKOTIKA   ");
+        System.out.println("═══════════════════════════════════════");
+        System.out.println("[1] Tambah Putusan Baru");
+        System.out.println("[2] Lihat Semua Putusan");
+        System.out.println("[3] Cari Putusan");
+        System.out.println("[4] Filter Putusan");
+        System.out.println("[5] Tampilkan Statistik");
+        System.out.println("[6] Hapus Putusan");
+        System.out.println("[7] Keluar");
+        System.out.print("Pilih menu (1-7): ");
+        try {
+            return Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            return -1;
+        }
     }
 
     public void tampilkanDaftarPutusan(ArrayList<Putusan> daftar) {
