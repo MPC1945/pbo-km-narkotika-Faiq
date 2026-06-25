@@ -50,10 +50,29 @@ public class ConsoleView {
         System.out.println("Total: " + daftar.size() + " putusan\n");
     }
 
-    public void tampilkanDetail(Putusan p) {
+        public void tampilkanDetail(Putusan p) {
+        tampilkanDetail(p, true);
     }
 
     public void tampilkanDetail(Putusan p, boolean detail) {
+        if (p == null) {
+            System.out.println(">>> Data tidak ditemukan. <<<");
+            return;
+        }
+        System.out.println("\n===== DETAIL PUTUSAN =====");
+        System.out.println("Nomor Perkara    : " + p.getNomorPerkara());
+        System.out.println("Pengadilan       : " + p.getPengadilan());
+        System.out.println("Tanggal Putusan  : " + p.getTanggalPutusan());
+        System.out.println("Nama Terdakwa    : " + p.getNamaTerdakwa());
+        System.out.println("Umur             : " + p.getUmurTerdakwa() + " tahun");
+        System.out.println("Jenis Narkotika  : " + p.getJenisNarkotika());
+        System.out.println("Berat Barang Bukti: " + p.getBeratBarangBukti() + " gram");
+        System.out.println("Pasal Dilanggar  : " + p.getPasalDilanggar());
+        System.out.println("Peran            : " + p.getPeranTerdakwa());
+        System.out.println("Vonis Hukuman    : " + p.getVonisHukuman() + " bulan");
+        System.out.println("Vonis Denda      : Rp " + String.format("%,.0f", p.getVonisDenda()));
+        System.out.println("Hakim Ketua      : " + p.getNamaHakim());
+        System.out.println("=============================\n");
     }
 
     public void tampilkanStatistik(StatistikPutusan stat) {
