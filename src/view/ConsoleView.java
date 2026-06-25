@@ -43,7 +43,8 @@ public class ConsoleView {
     public void tampilkanStatistik(StatistikPutusan stat) {
     }
 
-    public void tampilkanPesan(String pesan) {
+        public void tampilkanPesan(String pesan) {
+        System.out.println("[INFO] " + pesan);
     }
 
     public String[] inputFormPutusan() {
