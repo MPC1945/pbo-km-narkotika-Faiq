@@ -5,6 +5,15 @@ import model.StatistikPutusan;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * ConsoleView – lapisan tampilan (View) dalam arsitektur MVC.
+ * Bertanggung jawab menampilkan data kepada pengguna dan menerima input.
+ * Tidak mengandung logika bisnis. Semua data diperoleh melalui Controller.
+ *
+ * @author Nama : Muhammad Razan Daffa Majid Nim : 202510370110021 – GUI Designer
+ * @version 1.0
+ */
+
 public class ConsoleView {
     private final Scanner scanner;
 
@@ -12,6 +21,10 @@ public class ConsoleView {
         this.scanner = new Scanner(System.in);
     }
 
+    /**
+     * Menampilkan menu utama dan mengembalikan pilihan pengguna (1–7).
+     * @return pilihan menu, -1 jika input tidak valid
+     */
         public int tampilkanMenu() {
         System.out.println("\n═══════════════════════════════════════");
         System.out.println("   KMS PUTUSAN PENGADILAN NARKOTIKA   ");
@@ -31,6 +44,10 @@ public class ConsoleView {
         }
     }
 
+    /**
+     * Menampilkan daftar semua putusan dalam format tabel.
+     * @param daftar ArrayList berisi objek Putusan yang akan ditampilkan
+     */
             public void tampilkanDaftarPutusan(ArrayList<Putusan> daftar) {
         if (daftar.isEmpty()) {
             System.out.println("\n>>> Belum ada data putusan. <<<");
@@ -50,10 +67,19 @@ public class ConsoleView {
         System.out.println("Total: " + daftar.size() + " putusan\n");
     }
 
+    /**
+     * Menampilkan detail satu putusan secara lengkap.
+     * @param p objek Putusan yang akan ditampilkan detailnya
+     */
         public void tampilkanDetail(Putusan p) {
         tampilkanDetail(p, true);
     }
 
+    /**
+     * Menampilkan detail satu putusan.
+     * @param p objek Putusan
+     * @param detail jika true, tampilkan seluruh atribut
+     */
     public void tampilkanDetail(Putusan p, boolean detail) {
         if (p == null) {
             System.out.println(">>> Data tidak ditemukan. <<<");
@@ -75,6 +101,10 @@ public class ConsoleView {
         System.out.println("=============================\n");
     }
 
+    /**
+     * Menampilkan ringkasan statistik dari objek StatistikPutusan.
+     * @param stat objek StatistikPutusan yang berisi hasil perhitungan
+     */
         public void tampilkanStatistik(StatistikPutusan stat) {
         System.out.println("\n======= STATISTIK PUTUSAN =======");
         System.out.println("Total Putusan          : " + stat.getTotalPutusan());
@@ -88,10 +118,18 @@ public class ConsoleView {
         System.out.println("=================================\n");
     }
 
+    /**
+     * Menampilkan pesan informatif ke konsol.
+     * @param pesan teks yang akan ditampilkan
+     */
         public void tampilkanPesan(String pesan) {
         System.out.println("[INFO] " + pesan);
     }
 
+    /**
+     * Membaca seluruh data putusan baru dari keyboard.
+     * @return array String[12] berisi data mentah untuk dikirim ke Controller
+     */
         public String[] inputFormPutusan() {
         String[] data = new String[12];
         System.out.println("\n--- FORM INPUT PUTUSAN BARU ---");
@@ -110,6 +148,10 @@ public class ConsoleView {
         return data;
     }
 
+    /**
+     * Mengembalikan objek Scanner yang digunakan oleh View.
+     * @return Scanner
+     */
     public Scanner getScanner() {
         return scanner;
     }
