@@ -92,8 +92,22 @@ public class ConsoleView {
         System.out.println("[INFO] " + pesan);
     }
 
-    public String[] inputFormPutusan() {
-        return new String[12];
+        public String[] inputFormPutusan() {
+        String[] data = new String[12];
+        System.out.println("\n--- FORM INPUT PUTUSAN BARU ---");
+        System.out.print("Nomor Perkara      : "); data[0] = scanner.nextLine();
+        System.out.print("Nama Terdakwa      : "); data[1] = scanner.nextLine();
+        System.out.print("Pengadilan         : "); data[2] = scanner.nextLine();
+        System.out.print("Tanggal Putusan    : "); data[3] = scanner.nextLine();
+        System.out.print("Umur Terdakwa      : "); data[4] = scanner.nextLine();
+        System.out.print("Jenis Narkotika    : "); data[5] = scanner.nextLine();
+        System.out.print("Berat (gram)       : "); data[6] = scanner.nextLine();
+        System.out.print("Pasal Dilanggar    : "); data[7] = scanner.nextLine();
+        System.out.print("Peran Terdakwa     : "); data[8] = scanner.nextLine();
+        System.out.print("Vonis Hukuman (bln): "); data[9] = scanner.nextLine();
+        System.out.print("Vonis Denda (Rp)   : "); data[10] = scanner.nextLine();
+        System.out.print("Nama Hakim         : "); data[11] = scanner.nextLine();
+        return data;
     }
 
     public Scanner getScanner() {
