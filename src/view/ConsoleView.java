@@ -31,7 +31,23 @@ public class ConsoleView {
         }
     }
 
-    public void tampilkanDaftarPutusan(ArrayList<Putusan> daftar) {
+        public void tampilkanDaftarPutusan(ArrayList<Putusan> daftar) {
+        if (daftar.isEmpty()) {
+            System.out.println("\n>>> Belum ada data putusan. <<<");
+            return;
+        }
+        System.out.println("\n--- DAFTAR PUTUSAN ---");
+        String header = String.format("%-4s %-30s %-22s %-10s %-15s",
+                "No", "Nomor Perkara", "Nama Terdakwa", "Vonis(bln)", "Denda(Rp)");
+        System.out.println(header);
+        System.out.println("─".repeat(header.length() + 5));
+        int no = 1;
+        for (Putusan p : daftar) {
+            System.out.printf("%-4d %-30s %-22s %-10d Rp%,-15.0f%n",
+                    no++, p.getNomorPerkara(), p.getNamaTerdakwa(),
+                    p.getVonisHukuman(), p.getVonisDenda());
+        }
+        System.out.println("Total: " + daftar.size() + " putusan\n");
     }
 
     public void tampilkanDetail(Putusan p) {
