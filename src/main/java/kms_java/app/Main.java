@@ -2,7 +2,7 @@ package kms_java.app;
 
 /**
  * Entry point aplikasi KMS Putusan Pengadilan Narkotika.
- * @author [Nama Kamu]
+ * @author MPC
  */
 public class Main {
     public static void main(String[] args) {
