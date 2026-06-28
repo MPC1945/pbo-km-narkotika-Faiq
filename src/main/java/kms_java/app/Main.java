@@ -12,10 +12,19 @@ import java.util.Scanner;
 /**
  * Entry point aplikasi KMS Putusan Pengadilan Narkotika.
  * Menginisialisasi komponen MVC dan menjalankan loop menu utama.
+ * Tidak mengandung logika bisnis — hanya orkestrasi alur program.
  *
  * @author MPC
+ * @version 1.0
  */
 public class Main {
+
+    /**
+     * Method utama yang menjalankan aplikasi KMS.
+     * Menginisialisasi Controller dan View, lalu menjalankan loop menu.
+     *
+     * @param args argumen command line (tidak digunakan)
+     */
     public static void main(String[] args) {
         KnowledgeController controller = new KnowledgeController();
         ConsoleView view = new ConsoleView();
