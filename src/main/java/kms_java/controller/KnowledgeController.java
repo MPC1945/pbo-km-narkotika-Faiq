@@ -10,9 +10,12 @@ import java.util.Scanner;
 
 /**
  * KnowledgeController — lapisan Controller dalam arsitektur MVC.
- * Menjembatani Model dan View, memvalidasi input, dan mengorkestrasi alur data.
+ * Menjembatani Model dan View, memvalidasi input,
+ * dan mengorkestrasi alur data antar layer.
+ * Tidak menyimpan data secara langsung — semua data dikelola oleh Model.
  *
  * @author MPC
+ * @version 1.0
  */
 public class KnowledgeController {
 
