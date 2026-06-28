@@ -55,6 +55,26 @@ public class KnowledgeController {
                 "1005/Pid.Sus/2024/PN Sby", "Eko Prasetyo", "PN Surabaya",
                 "2024-04-05", 40, "Heroin", 2.3,
                 "Pasal 111 Ayat (2)", "Pengguna", 36, 800000, "Hakim Eko"));
+        repo.simpan(new Putusan(
+                "1006/Pid.Sus/2024/PN Sby", "Fajar Nugroho", "PN Surabaya",
+                "2024-04-15", 22, "Sabu-sabu", 3.1,
+                "Pasal 112 Ayat (1)", "Pengguna", 24, 500000, "Hakim Farida"));
+        repo.simpan(new Putusan(
+                "1007/Pid.Sus/2024/PN Sby", "Gita Purnama", "PN Surabaya",
+                "2024-05-01", 33, "Ganja", 150.0,
+                "Pasal 111 Ayat (2)", "Bandar", 96, 4000000, "Hakim Gunawan"));
+        repo.simpan(new Putusan(
+                "1008/Pid.Sus/2024/PN Sby", "Hendra Kusuma", "PN Surabaya",
+                "2024-05-20", 45, "Sabu-sabu", 8.7,
+                "Pasal 114 Ayat (2)", "Kurir", 84, 3500000, "Hakim Hasan"));
+        repo.simpan(new Putusan(
+                "1009/Pid.Sus/2024/PN Sby", "Indah Permata", "PN Surabaya",
+                "2024-06-10", 19, "Ekstasi", 25.0,
+                "Pasal 114 Ayat (1)", "Pengguna", 18, 300000, "Hakim Irma"));
+        repo.simpan(new Putusan(
+                "1010/Pid.Sus/2024/PN Sby", "Joko Widodo", "PN Surabaya",
+                "2024-06-25", 50, "Heroin", 1.5,
+                "Pasal 112 Ayat (2)", "Penyimpan", 48, 2000000, "Hakim Jaka"));
     }
 
     /**
