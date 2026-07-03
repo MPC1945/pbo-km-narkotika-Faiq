@@ -1,10 +1,10 @@
-package kms_java.app;
+package app;
 
-import kms_java.controller.KnowledgeController;
-import kms_java.model.Putusan;
-import kms_java.model.StatistikPutusan;
-import kms_java.util.InputHandler;
-import kms_java.view.ConsoleView;
+import controller.KnowledgeController;
+import model.Putusan;
+import model.StatistikPutusan;
+import util.InputHandler;
+import view.ConsoleView;
 
 import java.util.ArrayList;
 import java.util.Scanner;
