@@ -1,4 +1,4 @@
-package kms_java.util;
+package util;
 
 import java.util.Scanner;
 
