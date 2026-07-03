@@ -1,0 +1,15 @@
+[33mb1896e3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/model[m[33m, [m[1;31morigin/feature/model[m[33m)[m chore: periksa kembali seluruh fungsi pada layer Model
+[33m8594191[m style: rapihin penataan baris kosong di class StatistikPutusan
+[33m814185a[m style: rapihin penataan baris kosong di class Putusan
+[33mb03434c[m refactor: merapikan struktur indentasi kode pada layer Model
+[33m78212ff[m docs: tambah dokumentasi Javadoc pada class StatistikPutusan
+[33m4aa0dcf[m docs: tambah dokumentasi Javadoc pada class KnowledgeRepository
+[33m211cff1[m docs: tambah dokumentasi Javadoc pada class PutusanNarkotika
+[33mb5f7aa6[m docs: tambah dokumentasi Javadoc pada class Putusan
+[33m01802e8[m feat: tambah folder dataset_putusan.csv berisi data sampel
+[33m290f5a7[m feat: tambah class StatistikPutusan untuk kalkulasi data
+[33mee9d4a1[m feat: tambah KnowledgeRepository untuk manajemen koleksi ArrayList
+[33m6d4500c[m feat: implementasi inheritance menggunakan class PutusanNarkotika
+[33m99b5f76[m feat: tambah class Putusan dengan enkapsulasi field private
+[33mad8174b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Update README with additional description
+[33m913c807[m Initial commit
