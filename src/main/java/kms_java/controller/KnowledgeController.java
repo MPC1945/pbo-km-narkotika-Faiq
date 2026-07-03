@@ -1,9 +1,9 @@
-package kms_java.controller;
+package controller;
 
-import kms_java.model.KnowledgeRepository;
-import kms_java.model.Putusan;
-import kms_java.model.StatistikPutusan;
-import kms_java.util.InputHandler;
+import model.KnowledgeRepository;
+import model.Putusan;
+import model.StatistikPutusan;
+import util.InputHandler;
 
 import java.util.ArrayList;
 import java.util.Scanner;
