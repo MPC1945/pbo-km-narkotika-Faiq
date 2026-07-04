@@ -34,8 +34,7 @@ public class Main {
 
         int pilihan;
         do {
-            pilihan = InputHandler.validasiPilihan(
-                    view.tampilkanMenuDanReturn(), 1, 7, sc);
+            pilihan = view.tampilkanMenu();
 
             switch (pilihan) {
                 case 1:
