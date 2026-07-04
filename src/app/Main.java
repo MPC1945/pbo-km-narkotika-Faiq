@@ -79,12 +79,15 @@ public class Main {
                     }
                     break;
                 case 7:
+                    controller.eksporStatistik("statistik.txt");
+                    break;
+                case 8:
                     view.tampilkanPesan("Terima kasih. Sampai jumpa!");
                     break;
                 default:
                     view.tampilkanPesan("Pilihan tidak valid.");
             }
-        } while (pilihan != 7);
+        } while (pilihan != 8);
 
         sc.close();
     }

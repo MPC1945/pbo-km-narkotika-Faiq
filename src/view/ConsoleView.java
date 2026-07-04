@@ -35,8 +35,9 @@ public class ConsoleView {
         System.out.println("[4] Filter Putusan");
         System.out.println("[5] Tampilkan Statistik");
         System.out.println("[6] Hapus Putusan");
-        System.out.println("[7] Keluar");
-        System.out.print("Pilih menu (1-7): ");
+        System.out.println("[7] Ekspor Statistik ke .txt");
+        System.out.println("[8] Keluar");
+        System.out.print("Pilih menu (1-8): ");
         try {
             return Integer.parseInt(scanner.nextLine());
         } catch (NumberFormatException e) {

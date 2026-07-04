@@ -203,4 +203,23 @@ public class KnowledgeController {
     public Scanner getScanner() {
         return scanner;
     }
+    /**
+     * Mengekspor statistik putusan ke file teks.
+     * @param namaFile nama file output
+     */
+    public void eksporStatistik(String namaFile) {
+        try {
+            StatistikPutusan stat = getStatistik();
+            java.io.FileWriter fw = new java.io.FileWriter(namaFile);
+            fw.write("=== STATISTIK KMS PUTUSAN NARKOTIKA ===\n");
+            fw.write("Total Putusan       : " + stat.getTotalPutusan() + "\n");
+            fw.write("Rata-rata Vonis     : " + String.format("%.2f", stat.getRataRataVonis()) + " bulan\n");
+            fw.write("Rata-rata Denda     : Rp " + String.format("%,.2f", stat.getRataRataDenda()) + "\n");
+            fw.write("Narkotika Terbanyak : " + stat.getJenisNarkotikaTerbanyak() + "\n");
+            fw.close();
+            System.out.println("[INFO] Statistik berhasil diekspor ke " + namaFile);
+        } catch (Exception e) {
+            System.out.println("[ERROR] Gagal ekspor: " + e.getMessage());
+        }
+    }
 }
