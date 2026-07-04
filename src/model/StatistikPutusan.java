@@ -1,6 +1,8 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class StatistikPutusan {
     private int totalPutusan;
@@ -11,11 +13,40 @@ public class StatistikPutusan {
 
     public StatistikPutusan(ArrayList<Putusan> daftar) {
         this.totalPutusan = daftar.size();
-        this.rataRataVonis = 0.0;
-        this.rataRataDenda = 0.0;
-        this.jenisNarkotikaTerbanyak = "-";
-        this.distribusiPeran = new String[]{"belum dihitung"};
+        hitungSemua(daftar);
     }
+
+    public void hitungSemua(ArrayList<Putusan> daftar) {
+        if (daftar.isEmpty()) return;
+
+        double totalVonis = 0;
+        double totalDenda = 0;
+        Map<String, Integer> jenisCount = new HashMap<>();
+        Map<String, Integer> peranCount = new HashMap<>();
+
+        for (Putusan p : daftar) {
+            totalVonis += p.getVonisHukuman();
+            totalDenda += p.getVonisDenda();
+
+            jenisCount.put(p.getJenisNarkotika(),
+                jenisCount.getOrDefault(p.getJenisNarkotika(), 0) + 1);
+            peranCount.put(p.getPeranTerdakwa(),
+                peranCount.getOrDefault(p.getPeranTerdakwa(), 0) + 1);
+        }
+
+        this.rataRataVonis = totalVonis / daftar.size();
+        this.rataRataDenda = totalDenda / daftar.size();
+
+        this.jenisNarkotikaTerbanyak = jenisCount.entrySet().stream()
+            .max(Map.Entry.comparingByValue())
+            .map(Map.Entry::getKey).orElse("-");
+
+        this.distribusiPeran = peranCount.entrySet().stream()
+            .map(e -> e.getKey() + ": " + e.getValue())
+            .toArray(String[]::new);
+    }
+
+    public void hitungSemua() {}
 
     public int getTotalPutusan() { return totalPutusan; }
     public double getRataRataVonis() { return rataRataVonis; }

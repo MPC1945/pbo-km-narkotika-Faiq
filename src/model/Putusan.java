@@ -64,6 +64,27 @@ public class Putusan {
     public void setNamaHakim(String namaHakim) { this.namaHakim = namaHakim; }
     public static int getJumlahDibuat() { return jumlahDibuat; }
 
+    public String getKategoriHukuman() {
+        if (vonisHukuman <= 12) return "Ringan";
+        else if (vonisHukuman <= 60) return "Sedang";
+        else return "Berat";
+    }
+
+    public void tampilkan() {
+        System.out.println(toString());
+    }
+
+    public void tampilkan(boolean detail) {
+        if (detail) {
+            System.out.println("Nomor Perkara : " + nomorPerkara);
+            System.out.println("Nama Terdakwa : " + namaTerdakwa);
+            System.out.println("Vonis         : " + vonisHukuman + " bulan");
+            System.out.println("Kategori      : " + getKategoriHukuman());
+        } else {
+            tampilkan();
+        }
+    }
+
     @Override
     public String toString() {
         return String.format("%s | %s | %d bln | Rp %,.0f",
