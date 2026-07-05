@@ -30,7 +30,7 @@ java -cp out app.Main
 - Hapus putusan
 
 ## Video Demo
-[Akan Segera diupdate]
+https://youtu.be/70yaKqAQL-o
 
 ## Anggota Kelompok
 | Nama | NIM | Kelas | Peran | Branch |
